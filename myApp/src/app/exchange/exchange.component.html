@@ -1,0 +1,58 @@
+<div class="exchange">
+  <div class="cards">
+    <div class="USDUAH">
+      <div>USD/UAH</div>
+      <div class="price">{{ usduah }}</div>
+      <div style="font-size: 40px">🇺🇸🇺🇦</div>
+    </div>
+    <div class="EURUAH">
+      <div>EUR/UAH</div>
+      <div class="price">{{ euruah }}</div>
+      <div style="font-size: 40px">🇪🇺🇺🇦</div>
+    </div>
+    <div class="BTCUSD">
+      <div>BTC/USD</div>
+      <div class="price">{{ btcusd }}</div>
+      <div style="font-size: 40px; color: rgb(255, 170, 12)">🅑🇺🇸</div>
+    </div>
+  </div>
+  <div class="convertation">
+    <div class="exchangeFirst">
+      <span>Я отдаю:</span>
+      <select
+        name="select"
+        [value]="inputCurrency"
+        (change)="onChangeInputCurrency($event.target)"
+      >
+        <option
+          *ngFor="let currency of response"
+          selected="inputCurrency === 'USD'"
+          [value]="currency.ccy"
+        >
+          {{ currency.ccy }}
+        </option>
+      </select>
+      <input
+        min="0"
+        type="number"
+        [value]="input"
+        (change)="onChangeInput($event.target)"
+      />
+    </div>
+
+    <div class="exchangeSecond">
+      <span>Я получаю:</span>
+      <select
+        [value]="outputCurrency"
+        name="select"
+        (change)="onChangeOutputCurrency($event.target)"
+      >
+        <option *ngFor="let currency of response" [value]="currency.ccy">
+          {{ currency.ccy }}
+        </option>
+      </select>
+      <input *ngIf="response" type="text" [value]="output" />
+    </div>
+  </div>
+  <button (click)="convert()" class="exchangeButton">Convert</button>
+</div>

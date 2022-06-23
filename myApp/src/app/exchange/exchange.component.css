@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:regular);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.exchange {
+  max-width: 1000px;
+  width: 100%;
+  padding: 80px 0;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.cards {
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 80px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cards .USDUAH,
+.cards .BTCUSD,
+.cards .EURUAH {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  height: 200px;
+  width: 200px;
+  border: #cecece solid 1px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 34px;
+}
+
+.convertation {
+  max-width: 550px;
+  border: 1px solid #cecece;
+  border-radius: 20px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 25px;
+  flex-wrap: wrap;
+}
+
+.exchangeFirst,
+.exchangeSecond {
+  display: flex;
+  flex-direction: column;
+}
+
+.exchangeFirst select,
+.exchangeSecond select {
+  width: 200px;
+  height: 50px;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 15px auto;
+  border: 1px solid #74be68;
+  border-radius: 5px;
+}
+
+.exchangeFirst input,
+.exchangeSecond input {
+  border: 1px solid #74be68;
+  border-radius: 5px;
+  width: 200px;
+  height: 30px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.exchangeArrows button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "Inter";
+  font-size: 40px;
+  line-height: 48px;
+  color: #688abe;
+}
+
+.exchangeButton {
+  display: block;
+  border: none;
+  border-radius: 20px;
+  height: 50px;
+  margin: 0 auto;
+  background: #688abe;
+  max-width: 505px;
+  width: 100%;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.exchangeButton:hover {
+  background: #526d96;
+}

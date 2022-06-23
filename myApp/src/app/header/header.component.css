@@ -1,0 +1,43 @@
+h1 {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.headerWrapper {
+  background: #74be68;
+  min-height: 50px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+
+.headerExchange {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.headerExchangeItem {
+  color: #fff;
+  margin-top: 5px;
+}
+
+.headerExchangeItem:first-child {
+  margin-right: 20px;
+}

@@ -1,0 +1,19 @@
+<div class="headerWrapper">
+  <h1 class="headerTitle">{{ title }}</h1>
+  <div class="headerExchange">
+    <a
+      href="https://ru.investing.com/currencies/usd-uah"
+      class="usdUah headerExchangeItem"
+    >
+      <span>USD/UAH</span>:
+      <span>{{ usd }}</span>
+    </a>
+    <a
+      href="https://ru.investing.com/currencies/eur-uah"
+      class="eurUah headerExchangeItem"
+    >
+      <span>EUR/UAH</span>:
+      <span *ngIf="response">{{ eur }}</span>
+    </a>
+  </div>
+</div>
